@@ -1,11 +1,20 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import type { PageData } from './$types';
 	import { superForm } from 'sveltekit-superforms/client';
 
 	export let data: PageData;
 
 	// Client API:
-	const { form, message, enhance } = superForm(data.form);
+	const { form, message, enhance } = superForm(data.form, {
+		onResult: (result) => {
+			if (result.result.status === 200) {
+				setTimeout(() => {
+					goto('/login');
+				}, 1000);
+			}
+		}
+	});
 </script>
 
 <svelte:head>
