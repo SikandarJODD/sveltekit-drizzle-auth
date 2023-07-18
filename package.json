@@ -9,13 +9,16 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"format": "prettier --plugin-search-dir . --write .",
+		"generate": "drizzle-kit generate:pg"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
+		"@types/pg": "^8.10.2",
 		"autoprefixer": "^10.4.14",
 		"daisyui": "^3.1.6",
+		"drizzle-kit": "^0.19.8",
 		"postcss": "^8.4.24",
 		"postcss-load-config": "^4.0.1",
 		"prettier": "^2.8.0",
@@ -29,5 +32,13 @@
 		"vite": "^4.4.2",
 		"zod": "^3.21.4"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@lucia-auth/adapter-postgresql": "^1.0.1",
+		"dotenv": "^16.3.1",
+		"drizzle-orm": "^0.27.2",
+		"lucia-auth": "^1.8.0",
+		"pg": "^8.11.1",
+		"postgres": "^3.3.5"
+	}
 }

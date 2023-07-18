@@ -1,0 +1,27 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1689698795133,
+      "tag": "0000_fancy_nuke",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1689699401531,
+      "tag": "0001_sticky_tombstone",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1689699742487,
+      "tag": "0002_chilly_madame_masque",
+      "breakpoints": true
+    }
+  ]
+}
