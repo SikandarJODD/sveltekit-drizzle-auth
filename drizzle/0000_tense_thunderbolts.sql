@@ -14,7 +14,9 @@ CREATE TABLE IF NOT EXISTS "auth_session" (
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "auth_user" (
-	"id" varchar(15) PRIMARY KEY NOT NULL
+	"id" varchar(15) PRIMARY KEY NOT NULL,
+	"email" text,
+	"password" text
 );
 --> statement-breakpoint
 DO $$ BEGIN

@@ -1,38 +1,25 @@
-# create-svelte
+# SvelteKit - Lucia - Drizzle ORM
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
+### Installation 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
+ git clone https://github.com/SikandarJODD/sveltekit-drizzle-auth.git stable
 
-# create a new project in my-app
-npm create svelte@latest my-app
 ```
+### Install Packages 
 
-## Developing
+```npm i```
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Create <code>.env</code> File in Root Folder 
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
+DATABASE_URL= postgres://user:password@host:port/database
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
 ```
+Paste Your Database URL
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+### Usage Part
+- Go to <code>Drizzle</code> Folder
+- Copy the Migrations 
+- Paste this as New SQL Querry & Run
+- This will Create 3 Tables with <code>auth_key auth_session auth_user</code>
+- Now You are Ready to Go
