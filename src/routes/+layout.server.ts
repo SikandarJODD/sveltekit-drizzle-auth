@@ -1,7 +1,6 @@
 import { redirect } from "@sveltejs/kit";
 import type { LayoutServerLoad } from "./$types";
-import { goto } from "$app/navigation";
-
+import type { Config } from '@sveltejs/adapter-vercel';
 export const load: LayoutServerLoad = async ({ locals }) => {
     const { user } = await locals.auth.validateUser();
     
@@ -12,4 +11,8 @@ export const load: LayoutServerLoad = async ({ locals }) => {
         };
     }
    
+};
+
+export const config: Config = {
+    runtime: 'edge'
 };

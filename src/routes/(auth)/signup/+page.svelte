@@ -11,7 +11,7 @@
 			if (result.result.status === 200) {
 				setTimeout(() => {
 					goto('/login');
-				}, 1000);
+				}, 10);
 			}
 		}
 	});
