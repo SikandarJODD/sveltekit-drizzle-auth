@@ -6,7 +6,6 @@
 	];
 	import { enhance } from '$app/forms';
 	export let user: null = null;
-	$: console.log(user);
 </script>
 
 <div class="navbar bg-base-100 md:px-10">

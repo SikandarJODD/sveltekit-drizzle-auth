@@ -13,12 +13,10 @@ const schema = z.object({
 export const load = (async ({ locals }) => {
     // Server API:
     const form = await superValidate(schema);
-    const { user } = await locals.auth.validateUser();
-    if (user !== null) {
-        throw redirect(302, '/dashboard')
-    }
-
-
+    // const { user } = await locals.auth.validateUser();
+    // if (user !== null) {
+    //     throw redirect(302, '/dashboard')
+    // }
     // Always return { form } in load and form actions.
     return { form };
 });
@@ -37,6 +35,9 @@ export const actions: Actions = {
         } catch {
             // invalid username/password
             return fail(400);
+        }
+        finally {
+            throw redirect(302, '/dashboard')
         }
         return { form };
     }
