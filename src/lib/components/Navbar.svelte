@@ -1,11 +1,11 @@
 <!-- Navbar 1  -->
-<script>
+<script lang="ts">
 	let navs = [
 		{ name: 'Home', href: '/' },
 		{ name: 'Dashboard', href: '/dashboard' }
 	];
 	import { enhance } from '$app/forms';
-	export let user;
+	export let user: null = null;
 	$: console.log(user);
 </script>
 
