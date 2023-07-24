@@ -13,9 +13,8 @@
 		"generate": "drizzle-kit generate:pg"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-vercel": "^3.0.2",
+		"@sveltejs/adapter-auto": "^2.1.0",
 		"@sveltejs/kit": "^1.20.4",
-		"@types/pg": "^8.10.2",
 		"autoprefixer": "^10.4.14",
 		"daisyui": "^3.1.6",
 		"drizzle-kit": "^0.19.8",
@@ -38,7 +37,6 @@
 		"dotenv": "^16.3.1",
 		"drizzle-orm": "^0.27.2",
 		"lucia-auth": "^1.8.0",
-		"pg": "^8.11.1",
 		"postgres": "^3.3.5"
 	}
 }

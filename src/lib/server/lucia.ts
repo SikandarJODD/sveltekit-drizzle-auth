@@ -7,15 +7,14 @@ import { DATABASE_URL } from '$env/static/private'
 const pool = new postgres.Pool({
     connectionString: DATABASE_URL
 });
-
 export const auth = lucia({
     adapter: pg(pool),
     env: dev ? 'DEV' : 'PROD',
     middleware: sveltekit(),
     transformDatabaseUser: (data) => {
         return {
-			userId: data.id,
-			email: data.email
+            userId: data.id,
+            email: data.email
         };
     }
 });
